@@ -22,7 +22,7 @@ gatemap['victoria'] = {
 };
 gatemap['eton_manor'] = {
   center: new google.maps.LatLng(51.55324,-0.020869),
-  population: 290
+  population: 1000
 };
 gatemap['greenway'] = {
   center: new google.maps.LatLng(51.534204,-0.006922),
@@ -36,7 +36,7 @@ var gateCircle;
 
 function initialize() {
   var mapOptions = {
-    zoom: 15,
+    zoom: 14,
     center: new google.maps.LatLng(51.538782,-0.016743),
     mapTypeId: google.maps.MapTypeId.TERRAIN
   };
@@ -54,7 +54,7 @@ function initialize() {
       fillOpagate: 0.35,
       map: map,
       center: gatemap[gate].center,
-      radius: gatemap[gate].population / 200
+      radius: gatemap[gate].population / 80
     };
     gateCircle = new google.maps.Circle(populationOptions);
   }
