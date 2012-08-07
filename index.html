@@ -5,14 +5,18 @@
         html { height: 100% }
         body { height: 100%; margin: 0; padding: 0 }
         #map_canvas { height: 100% }
-        #script {
-          border: 10px;
+        
+        
+        #map_container {
+          border: 5px solid blue;
+          width:90%;
         }
         
       </style>
-   <div id="script"> <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJVxO2zUI8H8RbdkouJ9c51DzAfKHZRa4&sensor=true">
+    <div class="border"><script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJVxO2zUI8H8RbdkouJ9c51DzAfKHZRa4&sensor=true" class="border">
     </script>
+<<<<<<< HEAD
     <script type="text/javascript">
 	// Create an object containing LatLng, population.
 var gatemap = {};
@@ -60,7 +64,24 @@ function initialize() {
   }
 }
     </script> </div>
+=======
+   </div>    
+   <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(51.538782,-0.016743),
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script> 
+>>>>>>> Border for map
   </head>
   <body onload="initialize()">
-    <div id="map_canvas" style="width:90%; height:90%"></div>
+    <div id="map_container">
+      <div id="map_canvas" style="
+      height:90%"></div>
+    </div>
   </body>
